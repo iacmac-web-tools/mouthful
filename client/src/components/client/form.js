@@ -91,7 +91,7 @@ export default class Form extends Component {
       <input
         class={this.getStyle("mouthful_author_input")}
         type="text" name="author"
-        placeholder="Name (required)"
+        placeholder="Ваше имя"
         value={this.state.author}
         ref={c => {
           this.refMap.set(this.props.config.authorInputRefPrefix + this.props.id, c)
@@ -112,7 +112,7 @@ export default class Form extends Component {
         class={this.getStyle("mouthful_comment_input")}
         rows="3"
         name="commentBody"
-        placeholder="Type comment here..."
+        placeholder="Введите Ваш вопрос или комментарий"
         ref={c => {
           this.refMap.set(this.props.config.commentInputRefPrefix + this.props.id, c)
         }}
@@ -124,7 +124,7 @@ export default class Form extends Component {
       <input
         class={this.getStyle("mouthful_submit")}
         type="submit"
-        value="Submit"
+        value="Отправить"
         onClick={(e) => {this.handleNewCommentSubmit()}}>
       </input>
       {this.props.config.maxMessageLength > 0 ? <span class={diff > 0 ? this.getStyle("mouthful_word_counter") : this.getStyle("mouthful_word_counter_error")}>
