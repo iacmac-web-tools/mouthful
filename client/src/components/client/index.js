@@ -230,13 +230,13 @@ export default class App extends Component {
   }
   render(props) {
     if (this.state.error == true) {
-      return <div class={this.getStyle("mouthful_wrapper")}><div class={this.getStyle("mouthful_error")}>The comments are temporarily unavailable</div></div>
+      return <div class={this.getStyle("mouthful_wrapper")}><div class={this.getStyle("mouthful_error")}>Комментрии временно недоступны</div></div>
     }
     if (!this.state.configLoaded || !this.state.loaded) {
-      return <div class={this.getStyle("mouthful_wrapper")}><div class={this.getStyle("mouthful_no_comments")}>Loading...</div></div>
+      return <div class={this.getStyle("mouthful_wrapper")}><div class={this.getStyle("mouthful_no_comments")}>Загрузка...</div></div>
     }
     var commentsFiltered = this.state.comments.filter(x => x.ReplyTo == null).sort(sortComments);
-    var commentDiv = <div class={this.getStyle("mouthful_no_comments")}>No comments yet!</div>
+    var commentDiv = <div class={this.getStyle("mouthful_no_comments")}>Комментарии отсутствуют</div>
     var loadMoreComments = null;
     if (commentsFiltered.length != 0) {
       if (this.state.showComments && this.state.showComments > 0) {
