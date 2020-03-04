@@ -23,7 +23,7 @@ export default class Comment extends Component {
         return <div>
         <div class={this.getStyle("mouthful_author")}>{this.props.comment.Author}
         <span class={this.getStyle("mouthful_date")}>{formatDate(this.props.comment.CreatedAt)}</span>
-        {(!this.props.comment.Confirmed && this.props.config.moderation) ? <span class={this.getStyle("mouthful_moderation")}>In queue for moderation</span> : null}
+        {(!this.props.comment.Confirmed && this.props.config.moderation) ? <span class={this.getStyle("mouthful_moderation")}>Ожидает проверки</span> : null}
         </div>
         <div class={this.getStyle("mouthful_comment_body")} dangerouslySetInnerHTML={{ __html: this.props.comment.Body }} />
         </div>
