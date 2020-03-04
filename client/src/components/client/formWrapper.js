@@ -23,7 +23,7 @@ export default class FormWrapper extends Component {
                 class={this.getStyle("mouthful_reply_button")}
                 onClick={() => this.props.flipFormVisibility(this.props.comment.Id)}
                 type="submit"
-                value={this.props.visible ? "Close" : "Reply"}>
+                value={this.props.visible ? "Закрыть" : "Ответить"}>
             </input>
             <Form id={this.props.comment.Id} config={this.props.config} visible={this.props.visible} author={this.props.author} comment={""} replyTo={this.props.replyTo} submitForm={this.props.submitForm} />
         </div>
